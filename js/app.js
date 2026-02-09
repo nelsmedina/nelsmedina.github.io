@@ -197,14 +197,16 @@
 
         var isMobile = window.innerWidth < 768;
 
-        // GPU-accelerate the parallax container
-        heroBg.style.willChange = 'transform';
+        if (!isMobile) {
+            heroBg.style.willChange = 'transform';
+        }
 
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const heroH = window.innerHeight;
-            // Use translate3d for GPU compositing (smoother on mobile)
-            heroBg.style.transform = 'translate3d(0,' + (scrollY * -0.07) + 'px,0)';
+            if (!isMobile) {
+                heroBg.style.transform = 'translate3d(0,' + (scrollY * -0.07) + 'px,0)';
+            }
             if (heroContent && scrollY < heroH) {
                 var fadeDist = isMobile ? heroH * 1.2 : heroH * 0.6;
                 heroContent.style.opacity = Math.max(0, 1 - scrollY / fadeDist);
