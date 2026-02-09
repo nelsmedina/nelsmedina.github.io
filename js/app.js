@@ -129,7 +129,7 @@
                 );
                 observer.observe(container);
             })
-            .catch(function (err) { console.warn('Ephys data not loaded:', err); });
+            .catch(function () {});
 
         window.addEventListener('resize', function () { resize(); });
     }
@@ -201,7 +201,8 @@
             // Shift the entire bg container (image + overlay move together)
             heroBg.style.transform = 'translateY(' + (scrollY * -0.07) + 'px)';
             if (heroContent && scrollY < heroH) {
-                heroContent.style.opacity = Math.max(0, 1 - scrollY / (heroH * 0.6));
+                var fadeDist = Math.max(heroH * 0.6, 500);
+                heroContent.style.opacity = Math.max(0, 1 - scrollY / fadeDist);
             }
         }, { passive: true });
     }
