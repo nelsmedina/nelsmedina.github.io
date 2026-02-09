@@ -133,7 +133,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-intro {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
     animation: fadeInUp 0.8s ease-out 0.2s both;
 }
@@ -146,8 +146,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .hero-photo {
-    width: 260px;
-    height: 260px;
+    width: 320px;
+    height: 320px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid rgba(255, 255, 255, 0.15);
@@ -158,8 +158,8 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-icons {
     display: flex;
     justify-content: center;
-    gap: 1.25rem;
-    margin-top: 0.4rem;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 .hero-icons a {
@@ -176,8 +176,8 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-icons a:nth-child(3) { transform: translateY(-5px); }
 
 .hero-icons svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 
 /* Hover the whole photo area: border glows, icons grow + brighten */
@@ -199,13 +199,13 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-nav {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.25rem;
+    gap: 1.75rem;
+    margin-top: 1.5rem;
 }
 
 .hero-nav a {
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.02em;
     transition: color 0.3s;
@@ -263,7 +263,7 @@ img { max-width: 100%; height: auto; display: block; }
     position: relative;
     width: 100%;
     height: 200px;
-    margin-top: 4rem;
+    margin-top: 6rem;
     overflow: hidden;
     /* transparent so the hero EM background bleeds through */
     background: transparent;
