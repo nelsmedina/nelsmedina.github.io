@@ -514,7 +514,15 @@ body.tab-songmemory .section-title {
     object-fit: cover;
     border-radius: 8px;
     display: block;
-    transition: opacity 0.4s ease;
+    cursor: pointer;
+    transition: opacity 0.4s ease, transform 0.3s ease, z-index 0s;
+}
+
+.gallery-img:active,
+.gallery-img.expanded {
+    transform: scale(1.6);
+    z-index: 10;
+    position: relative;
 }
 
 .gallery-track-wide {

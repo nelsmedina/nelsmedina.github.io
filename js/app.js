@@ -249,6 +249,23 @@
     }
 
     // =========================================================================
+    // Gallery image expand on click
+    // =========================================================================
+
+    function initGalleryExpand() {
+        document.querySelectorAll('.gallery-img').forEach(function (img) {
+            img.addEventListener('click', function () {
+                var wasExpanded = img.classList.contains('expanded');
+                // Collapse any other expanded image first
+                document.querySelectorAll('.gallery-img.expanded').forEach(function (other) {
+                    other.classList.remove('expanded');
+                });
+                if (!wasExpanded) img.classList.add('expanded');
+            });
+        });
+    }
+
+    // =========================================================================
     // Initialize
     // =========================================================================
 
@@ -258,5 +275,6 @@
         initFadeAnimations();
         initHeroParallax();
         initSegToggles();
+        initGalleryExpand();
     });
 })();
