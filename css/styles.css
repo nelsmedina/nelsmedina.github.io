@@ -946,8 +946,8 @@ body.tab-songmemory .seg-toggles {
 
     .gallery-img { height: 100px; }
 
-    .tools-area { grid-template-columns: 1fr; }
-    .tool-card { padding: 1rem; }
+    .tools-area { grid-template-columns: 1fr; gap: 0; }
+    .tool-card { padding: 1rem; margin-bottom: 0.5rem; }
     .software-mini-title { font-size: 0.95rem; }
     .software-mini-name { font-size: 0.7rem; }
     .software-mini-desc { font-size: 0.78rem; }
