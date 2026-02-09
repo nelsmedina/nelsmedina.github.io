@@ -904,14 +904,11 @@ body.tab-songmemory .seg-toggles {
     }
 
     .research-buttons {
-        flex-direction: row;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
     }
 
     .research-btn {
-        min-width: 160px;
-        flex-shrink: 0;
+        min-width: 0;
     }
 
     .btn-label { font-size: 0.85rem; }
@@ -935,7 +932,7 @@ body.tab-songmemory .seg-toggles {
     .seg-caption { font-size: 0.75rem; }
     .seg-toggle { font-size: 0.9rem; }
 
-    .ephys-divider { height: 100px; }
+    .ephys-divider { height: 160px; }
 
     .divider-finch { left: 0; bottom: 0; height: 80%; }
 

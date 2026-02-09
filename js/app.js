@@ -22,7 +22,7 @@
 
         // Visual params
         const COLORS = { v1: '#CC6677', v2: '#44AA99' };
-        const LINE_WIDTH = 1.5;
+        const LINE_WIDTH = window.innerWidth < 768 ? 1 : 1.5;
         // Seconds of data visible at once
         const WINDOW_SECONDS = 20;
         const SPEED = 0.4;
@@ -195,13 +195,17 @@
         const heroContent = document.querySelector('.hero-content');
         if (!heroBg) return;
 
+        var isMobile = window.innerWidth < 768;
+
         window.addEventListener('scroll', () => {
             const scrollY = window.scrollY;
             const heroH = window.innerHeight;
-            // Shift the entire bg container (image + overlay move together)
-            heroBg.style.transform = 'translateY(' + (scrollY * -0.07) + 'px)';
+            // Disable parallax on mobile to prevent stutter
+            if (!isMobile) {
+                heroBg.style.transform = 'translateY(' + (scrollY * -0.07) + 'px)';
+            }
             if (heroContent && scrollY < heroH) {
-                var fadeDist = Math.max(heroH * 0.6, 500);
+                var fadeDist = isMobile ? heroH * 1.2 : heroH * 0.6;
                 heroContent.style.opacity = Math.max(0, 1 - scrollY / fadeDist);
             }
         }, { passive: true });
