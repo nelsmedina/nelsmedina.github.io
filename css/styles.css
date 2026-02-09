@@ -631,7 +631,7 @@ body.tab-songmemory .section-title {
 .pub-year {
     font-family: var(--font-heading);
     font-size: 1rem;
-    color: var(--accent-sand);
+    color: var(--text-muted);
     padding-top: 0.2rem;
 }
 
@@ -663,13 +663,13 @@ a.pub-title:hover svg.ext-arrow {
 
 .pub-authors {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--text-muted);
     margin-bottom: 0.2rem;
 }
 
 .pub-journal {
     font-size: 0.85rem;
-    color: var(--accent-teal);
+    color: var(--text-muted);
     font-style: italic;
 }
 
