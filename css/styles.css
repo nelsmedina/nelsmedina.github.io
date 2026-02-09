@@ -631,7 +631,7 @@ body.tab-songmemory .section-title {
 .pub-year {
     font-family: var(--font-heading);
     font-size: 1rem;
-    color: var(--text-muted);
+    color: var(--accent-sand);
     padding-top: 0.2rem;
 }
 
