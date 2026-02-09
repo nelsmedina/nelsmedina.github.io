@@ -873,88 +873,89 @@ body.tab-songmemory .seg-toggles {
    ========================================================================== */
 
 @media (max-width: 768px) {
-    .hero-content { padding: 0 1.25rem; }
+    body { font-size: 14px; line-height: 1.6; }
+
+    .container { padding: 0 1rem; }
+    .hero-content { padding: 0 1rem; }
 
     .hero-intro {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 1.25rem;
+        gap: 1rem;
     }
 
-    .hero-photo-wrap {
-        align-self: center;
-    }
+    .hero-photo-wrap { align-self: center; }
+    .hero-photo { width: 120px; height: 120px; }
+    .hero-icons a svg { width: 13px; height: 13px; }
+    .hero-nav { gap: 1rem; margin-top: 0.75rem; }
+    .hero-nav a { font-size: 0.75rem; }
 
-    .hero-photo { width: 150px; height: 150px; }
+    .hero-title { font-size: 1.8rem; }
+    .hero-subtitle { font-size: 0.85rem; }
 
     .hero-about {
         max-width: none;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
     }
-
-    .hero-subtitle { font-size: 1rem; }
 
     .research-tools-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
-    .research-layout {
-        grid-template-columns: 1fr;
-    }
+    .research-layout { grid-template-columns: 1fr; }
 
     .research-buttons {
         flex-direction: column;
+        gap: 0.5rem;
     }
 
-    .research-btn {
-        min-width: 0;
-    }
+    .research-btn { min-width: 0; }
+    .btn-label { font-size: 0.8rem; }
+    .btn-sub { font-size: 0.65rem; }
+    .btn-content { padding: 0.6rem 0.85rem; gap: 0.15rem; }
+    .btn-accent { width: 3px; }
+    .research-btn.active .btn-accent { width: 4px; }
 
-    .btn-label { font-size: 0.85rem; }
-    .btn-sub { font-size: 0.7rem; }
-    .btn-content { padding: 0.75rem 1rem; }
+    .panel-text p { font-size: 0.78rem; margin-bottom: 0.6rem; }
+    .card-tag { font-size: 0.65rem; padding: 0.15rem 0.5rem; }
 
-    .panel-text p { font-size: 0.85rem; }
+    .gallery-img { height: 100px; }
 
-    .gallery-img { height: 120px; }
-
-    .tools-area {
-        grid-template-columns: 1fr;
-    }
+    .tools-area { grid-template-columns: 1fr; }
+    .tool-card { padding: 1rem; }
+    .software-mini-title { font-size: 0.95rem; }
+    .software-mini-name { font-size: 0.7rem; }
+    .software-mini-desc { font-size: 0.78rem; }
+    .software-mini-link { font-size: 0.85rem; }
 
     .seg-toggles {
         position: static;
         flex-direction: row;
         gap: 0.75rem;
     }
+    .seg-caption { font-size: 0.7rem; }
+    .seg-toggle { font-size: 0.8rem; }
 
-    .seg-caption { font-size: 0.75rem; }
-    .seg-toggle { font-size: 0.9rem; }
+    .ephys-divider { height: 150px; }
 
-    .ephys-divider { height: 160px; }
+    .pub-item { grid-template-columns: 1fr; gap: 0.2rem; padding: 1rem 0; }
+    .pub-year { font-size: 0.85rem; }
+    .pub-title { font-size: 0.82rem; }
+    .pub-authors { font-size: 0.78rem; }
+    .pub-journal { font-size: 0.75rem; }
 
-    .divider-finch { left: 0; bottom: 0; height: 80%; }
+    .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .contact-affiliation { font-size: 0.95rem; }
+    .contact-address, .contact-lab { font-size: 0.8rem; }
+    .contact-link { font-size: 0.8rem; }
 
-    .pub-item {
-        grid-template-columns: 1fr;
-        gap: 0.25rem;
-    }
+    .section { padding: 2.5rem 0; }
+    .section-title { font-size: 1.3rem; margin-bottom: 1.5rem; }
 
-    .pub-title { font-size: 0.9rem; }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .section { padding: 3rem 0; }
-    .section-title { font-size: 1.5rem; margin-bottom: 2rem; }
-
-    .panel-gallery-wide {
-        margin-left: 0;
-        width: 100%;
-    }
+    .panel-gallery-wide { margin-left: 0; width: 100%; }
 }
 
 /* ==========================================================================
