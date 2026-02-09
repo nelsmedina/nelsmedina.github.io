@@ -875,6 +875,12 @@ body.tab-songmemory .seg-toggles {
 @media (max-width: 768px) {
     body { font-size: 14px; line-height: 1.6; }
 
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+
     .container { padding: 0 1rem; }
     .hero-content { padding: 0 1rem; }
 
