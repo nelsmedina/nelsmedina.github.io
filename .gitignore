@@ -1,0 +1,19 @@
+# Source TIF files (too large for git)
+*.tif
+
+# Unused assets
+assets/em_banner.png
+assets/em_banner_long.png
+assets/em_banner_opaque.jpg
+assets/em_hero.jpg
+assets/ephys_strip.jpg
+assets/ephys_traces.png
+assets/ephys_traces.json
+assets/eGFP_patch_merged.jpg
+assets/finch.png
+assets/finch_transparent.png
+assets/funkyfinch_banner.png
+assets/segmentation_overlay.png
+
+# OS files
+.DS_Store
