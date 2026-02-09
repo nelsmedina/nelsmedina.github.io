@@ -873,7 +873,13 @@ body.tab-songmemory .seg-toggles {
    ========================================================================== */
 
 @media (max-width: 768px) {
-    body { font-size: 14px; line-height: 1.6; }
+    :root {
+        --text-primary: #f0f4f8;
+        --text-secondary: #c9d1d9;
+        --text-muted: #8b949e;
+    }
+
+    body { font-size: 15px; line-height: 1.6; }
 
     .hero-bg {
         position: absolute;
