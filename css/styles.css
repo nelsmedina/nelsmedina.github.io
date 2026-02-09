@@ -375,7 +375,7 @@ body.tab-songmemory .section-title {
 
 .research-tools-grid {
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr 520px;
     gap: 3rem;
     align-items: start;
 }
