@@ -878,7 +878,7 @@ body.tab-songmemory .seg-toggles {
     .hero-bg {
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: -300vh;
     }
 
     .container { padding: 0 1rem; }
