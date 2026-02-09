@@ -891,8 +891,9 @@ body.tab-songmemory .seg-toggles {
     }
 
     .hero-photo-wrap { align-self: center; }
-    .hero-photo { width: 120px; height: 120px; }
-    .hero-icons a svg { width: 13px; height: 13px; }
+    .hero-photo { width: 180px; height: 180px; }
+    .hero-icons a svg { width: 18px; height: 18px; }
+    .hero-icons { gap: 1.5rem; }
     .hero-nav { gap: 1rem; margin-top: 0.75rem; }
     .hero-nav a { font-size: 0.75rem; }
 
