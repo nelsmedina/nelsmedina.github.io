@@ -499,7 +499,7 @@ body.tab-songmemory .section-title {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4px;
-    transition: grid-template-columns 0.3s ease;
+    transition: grid-template-columns 0.5s ease;
 }
 
 .gallery-track[data-count="1"] {
@@ -518,24 +518,31 @@ body.tab-songmemory .section-title {
     border-radius: 8px;
     display: block;
     cursor: pointer;
-    transition: opacity 0.3s ease, height 0.3s ease;
+    transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease;
+    align-self: center;
 }
 
 .gallery-track.has-expanded {
     grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
 }
 
 .gallery-track.has-expanded .gallery-img {
-    height: 120px;
-    opacity: 0.5;
+    height: 100px;
+    opacity: 0.45;
+    transform: scale(0.9);
+}
+
+.gallery-track.has-expanded .gallery-img:hover {
+    opacity: 0.7;
 }
 
 .gallery-track.has-expanded .gallery-img.expanded {
-    height: 340px;
-    object-fit: contain;
+    height: 320px;
+    object-fit: cover;
     opacity: 1;
+    transform: scale(1);
     border-radius: 6px;
-    background: rgba(0, 0, 0, 0.3);
 }
 
 .gallery-track-wide {
@@ -957,8 +964,8 @@ body.tab-songmemory .seg-toggles {
     .card-tag { font-size: 0.65rem; padding: 0.15rem 0.5rem; }
 
     .gallery-img { height: 100px; }
-    .gallery-track.has-expanded .gallery-img { height: 70px; }
-    .gallery-track.has-expanded .gallery-img.expanded { height: 220px; }
+    .gallery-track.has-expanded .gallery-img { height: 60px; }
+    .gallery-track.has-expanded .gallery-img.expanded { height: 200px; }
 
     .tools-area { grid-template-columns: 1fr; gap: 0; }
     .tool-card { padding: 1rem; margin-bottom: 0.5rem; }
