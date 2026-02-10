@@ -905,9 +905,10 @@ body.tab-songmemory .seg-toggles {
         --text-primary: #f0f4f8;
         --text-secondary: #c9d1d9;
         --text-muted: #8b949e;
+        --accent-sand: #f0f4f8;
     }
 
-    body { font-size: 15px; line-height: 1.6; }
+    body { font-size: 15px; line-height: 1.6; font-weight: 550; }
 
     .hero-bg {
         position: absolute;
