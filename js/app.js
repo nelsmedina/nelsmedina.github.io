@@ -253,14 +253,39 @@
     // =========================================================================
 
     function initGalleryExpand() {
-        document.querySelectorAll('.gallery-img').forEach(function (img) {
-            img.addEventListener('click', function () {
-                var wasExpanded = img.classList.contains('expanded');
-                // Collapse any other expanded image first
-                document.querySelectorAll('.gallery-img.expanded').forEach(function (other) {
-                    other.classList.remove('expanded');
+        document.querySelectorAll('.gallery-track').forEach(function (track) {
+            var imgs = Array.from(track.querySelectorAll('.gallery-img'));
+            if (imgs.length !== 3) return;
+
+            // Store original order
+            var originalOrder = imgs.map(function (img) { return img.style.order || ''; });
+
+            imgs.forEach(function (img, idx) {
+                img.addEventListener('click', function () {
+                    var wasExpanded = img.classList.contains('expanded');
+
+                    // Reset all
+                    imgs.forEach(function (i, j) {
+                        i.classList.remove('expanded');
+                        i.style.order = originalOrder[j];
+                    });
+                    track.classList.remove('has-expanded');
+
+                    if (!wasExpanded) {
+                        img.classList.add('expanded');
+                        track.classList.add('has-expanded');
+                        // Move clicked image to center (order 1), others to 0 and 2
+                        var pos = 0;
+                        imgs.forEach(function (i) {
+                            if (i === img) {
+                                i.style.order = '1';
+                            } else {
+                                i.style.order = pos === 0 ? '0' : '2';
+                                pos++;
+                            }
+                        });
+                    }
                 });
-                if (!wasExpanded) img.classList.add('expanded');
             });
         });
     }

@@ -491,7 +491,7 @@ body.tab-songmemory .section-title {
 }
 
 .gallery-viewport {
-    overflow: hidden;
+    overflow: visible;
     border-radius: 8px;
 }
 
@@ -499,6 +499,7 @@ body.tab-songmemory .section-title {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4px;
+    transition: grid-template-columns 0.3s ease;
 }
 
 .gallery-track[data-count="1"] {
@@ -513,17 +514,28 @@ body.tab-songmemory .section-title {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    grid-column: span 1;
     border-radius: 8px;
     display: block;
     cursor: pointer;
-    transition: opacity 0.4s ease, transform 0.3s ease, z-index 0s;
+    transition: opacity 0.3s ease, height 0.3s ease;
 }
 
-.gallery-img:active,
-.gallery-img.expanded {
-    transform: scale(1.6);
-    z-index: 10;
-    position: relative;
+.gallery-track.has-expanded {
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.gallery-track.has-expanded .gallery-img {
+    height: 120px;
+    opacity: 0.5;
+}
+
+.gallery-track.has-expanded .gallery-img.expanded {
+    height: 340px;
+    object-fit: contain;
+    opacity: 1;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .gallery-track-wide {
@@ -945,6 +957,8 @@ body.tab-songmemory .seg-toggles {
     .card-tag { font-size: 0.65rem; padding: 0.15rem 0.5rem; }
 
     .gallery-img { height: 100px; }
+    .gallery-track.has-expanded .gallery-img { height: 70px; }
+    .gallery-track.has-expanded .gallery-img.expanded { height: 220px; }
 
     .tools-area { grid-template-columns: 1fr; gap: 0; }
     .tool-card { padding: 1rem; margin-bottom: 0.5rem; }
